@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg-0: #000000;
+  --color-bg-1: #0a0a0a;
+  --color-bg-2: #141414;
+  --color-bg-3: #1a1a1a;
+  --color-bg-4: #2a2a2a;
+
+  --color-text-primary: #e8e8e8;
+  --color-text-secondary: #c0c0c0;
+  --color-text-tertiary: #8a8a8a;
+  --color-text-quaternary: #6b7280;
+
+  --color-border-subtle: #1a1a1a;
+  --color-border-medium: #2a2a2a;
+  --color-border-strong: #3a3a3a;
+
+  --accent-primary: #ff5722;
+  --accent-hover: #ff6b3d;
+  --accent-pressed: #e64a19;
+  --accent-disabled: rgba(255, 87, 34, 0.3);
+  --accent-surface: rgba(255, 87, 34, 0.08);
+
+  --status-success: #22c55e;
+  --status-warning: #eab308;
+  --status-error: #ef4444;
+  --status-neutral: #6b7280;
+
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', 'Courier New', monospace;
+
+  --spacing-unit: 8px;
+
+  font-family: var(--font-ui);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-1);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-1);
+  color: var(--color-text-secondary);
+  font-family: var(--font-ui);
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
+button {
+  font-family: inherit;
+}
+
+.scrollable {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+[data-prefers-reduced-motion='true'] * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
